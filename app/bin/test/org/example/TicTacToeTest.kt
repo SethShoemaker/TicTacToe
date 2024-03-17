@@ -40,4 +40,22 @@ class TicTacToeTest {
 
         assertEquals(expected, actual);
     }
+
+    @Test fun getTicTacToeWinnerReturnsDetectsDiagonalFromTopLeftToBottomRight() {
+        val input = listOf(1, 1, 0, 2, 1, 1, 0, 0, 1);
+
+        val expected = 1;
+        val actual = TicTacToe.getTicTacToeWinner(input);
+
+        assertEquals(expected, actual);
+    }
+
+    @Test fun getTicTacToeWinnerReturnsDetectsDiagonalFromBottomLeftToTopRight() {
+        val input = listOf(0, 0, 1, 0, 1, 0, 1, 0, 0);
+
+        val expected = 1;
+        val actual = TicTacToe.getTicTacToeWinner(input);
+
+        assertEquals(expected, actual);
+    }
 }
